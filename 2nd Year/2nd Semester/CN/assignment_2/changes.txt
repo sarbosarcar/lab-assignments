@@ -1,0 +1,5 @@
+> go back n: piggybacked
+add int nack to struct frame in protocol.h
+
+> simplest
+add getchar() before while (1) in main()

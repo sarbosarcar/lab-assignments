@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+
+double f(float x) {
+	return (double) 1/(1+x);
+}
+
+double trap(int a, int b, int n) {
+	double step = (b-a)/n;
+
+	double sum=0; int i;
+	for (i=a; i<=b; i+=step) {
+		sum+=(i!=a && i!=b) ? f(i)*2 : f(i);
+		printf("%lf\n", sum);
+	}
+	double t;
+	t = (step/2)*sum;
+	printf("%lf,, %lf,,, ", step, sum);
+	return t;
+}
+	
+int main() {
+	int a=0, b=6, n=6;
+	double trapint = trap(a, b, n);
+	printf("\n%lf\n", trapint);
+	return 0;
+}
+	
